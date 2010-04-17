@@ -37,7 +37,7 @@ server.
 %attr(0750,%{name},%{name}) %{_logdir}/%{name}
 %{_bindir}/%{name}
 %{_datadir}/%{name}
-%{_mandir}/man1
+%{_mandir}/man1/*
 %{_infodir}/%{name}.info.lzma
 %dir %{_sysconfdir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}/config
@@ -88,11 +88,7 @@ rm -f %{buildroot}%{_infodir}/dir
 
 %preun
 %_preun_service %{name}
-/sbin/install-info --quiet --info-dir=%{_infodir} --delete %{_infodir}/%{name}.info.lzma || :
-if [ $1 = 0 ] ; then
-	rm -f %{_logdir}/%{name}
-        chkconfig --del %{name}
-fi
+%_install_info
 
 %postun
 %_postun_userdel %{name}
