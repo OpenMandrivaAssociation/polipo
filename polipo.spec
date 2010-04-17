@@ -1,7 +1,7 @@
 
 Name:			polipo
 Summary:		Lightweight caching web proxy
-Group:			System Environment/Daemons
+Group:			System/Servers
 Version:		1.0.4.1
 Release:		%mkrel 1
 License:		MIT
