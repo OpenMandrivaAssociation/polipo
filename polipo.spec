@@ -15,6 +15,7 @@ Source5:		%{name}.nm
 Patch0:			polipo-1.0.4.1-fix-Makefile-to-access-install-info.patch
 BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:		info-install
+Buildrequires:      texinfo
 Requires(pre):		rpm-helper
 Requires(post):		rpm-helper
 Requires(preun):	rpm-helper
