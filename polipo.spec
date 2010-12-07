@@ -3,7 +3,7 @@ Name:			polipo
 Summary:		Lightweight caching web proxy
 Group:			System/Servers
 Version:		1.0.4.1
-Release:		%mkrel 1
+Release:		%mkrel 2
 License:		MIT
 URL:			http://www.pps.jussieu.fr/~jch/software/%{name}/
 Source0:		http://freehaven.net/~chrisd/%{name}/%{name}-%{version}.tar.gz
