@@ -1,28 +1,20 @@
-
-Name:			polipo
-Summary:		Lightweight caching web proxy
-Group:			System/Servers
-Version:		1.0.4.1
-Release:		%mkrel 2
-License:		MIT
-URL:			http://www.pps.jussieu.fr/~jch/software/%{name}/
-Source0:		http://freehaven.net/~chrisd/%{name}/%{name}-%{version}.tar.gz
-Source1:		%{name}.init
-Source2:		%{name}.conf
-Source3:		%{name}.forbidden
-Source4:		%{name}.logrotate
-Source5:		%{name}.nm
-Patch0:			polipo-1.0.4.1-fix-Makefile-to-access-install-info.patch
-BuildRoot:		%{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires:		info-install
-Buildrequires:      texinfo
-Requires(pre):		rpm-helper
-Requires(post):		rpm-helper
-Requires(preun):	rpm-helper
-Requires(postun):	rpm-helper
-Requires:		chkconfig
-Requires:		info-install
-Requires:		logrotate
+Name:		polipo
+Summary:	Lightweight caching web proxy
+Group:		System/Servers
+Version:	1.0.4.1
+Release:	3
+License:	MIT
+URL:		http://www.pps.jussieu.fr/~jch/software/%{name}/
+Source0:	http://freehaven.net/~chrisd/%{name}/%{name}-%{version}.tar.gz
+Source1:	%{name}.init
+Source2:	%{name}.conf
+Source3:	%{name}.forbidden
+Source4:	%{name}.logrotate
+Source5:	%{name}.nm
+Patch0:		polipo-1.0.4.1-fix-Makefile-to-access-install-info.patch
+Buildrequires:	texinfo
+Requires:	chkconfig
+Requires:	logrotate
 
 %description
 Polipo is a lightweight caching web proxy that was designed as a personal
@@ -31,7 +23,6 @@ range requests. It will use HTTP/1.1 pipelining if supported by the remote
 server.
 
 %files
-%defattr(-,root,root,-)
 %doc README CHANGES COPYING config.sample
 %attr(0750,%{name},%{name}) %dir %{_var}/cache/%{name}
 %attr(0750,%{name},%{name}) %dir %{_var}/run/%{name}
@@ -85,17 +76,11 @@ rm -f %{buildroot}%{_infodir}/dir
 
 %post
 %_post_service %{name}
-/sbin/install-info --quiet --info-dir=%{_infodir} %{_infodir}/%{name}.info.lzma || : 
 
 %preun
 %_preun_service %{name}
-%_install_info
 
 %postun
 %_postun_userdel %{name}
-
-
-%clean
-rm -rf %{buildroot}
 
 
