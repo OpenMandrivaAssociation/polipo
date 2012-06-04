@@ -30,7 +30,7 @@ server.
 %{_bindir}/%{name}
 %{_datadir}/%{name}
 %{_mandir}/man1/*
-%{_infodir}/%{name}.info.lzma
+%{_infodir}/%{name}.info*
 %dir %{_sysconfdir}/%{name}
 %config(noreplace) %{_sysconfdir}/%{name}/config
 %config(noreplace) %{_sysconfdir}/%{name}/forbidden
@@ -82,5 +82,4 @@ rm -f %{buildroot}%{_infodir}/dir
 
 %postun
 %_postun_userdel %{name}
-
 
