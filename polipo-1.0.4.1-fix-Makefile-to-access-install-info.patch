@@ -1,0 +1,11 @@
+--- media/ext3/linux/svn/trunk/polipo/Makefile	2010-04-12 12:30:58.000000000 +0100
++++ Makefile	2010-04-12 14:21:38.337341265 +0100
+@@ -111,7 +111,7 @@ install.man: all
+ 	mkdir -p $(TARGET)$(INFODIR)
+ 	cp -f polipo.man $(TARGET)$(MANDIR)/man1/polipo.1
+ 	cp polipo.info $(TARGET)$(INFODIR)/
+-	install-info --info-dir=$(TARGET)$(INFODIR) polipo.info
++	/sbin/install-info --info-dir=$(TARGET)$(INFODIR) polipo.info
+ 
+ 
+ polipo.info: polipo.texi

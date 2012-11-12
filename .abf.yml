@@ -1,0 +1,7 @@
+sources:
+  "polipo-1.0.4.1.tar.gz:"	e755b585a9bba2b599a6bcc7c6f7035d3cb27bec
+  "polipo.conf:"	c340af3d30c434907c0426569064ce268326c387
+  "polipo.forbidden:"	9cbf3af23c8a71ad78459704e96db88dcaa8c254
+  "polipo.init:"	274aeef25079f91759971bd38847b5ffd76dead0
+  "polipo.logrotate:"	7ed52768414b64833bcafe0a405aff3303a214fd
+  "polipo.nm:"	0eacf38276f3bb5c7790c12bde96de0cea2d898c
