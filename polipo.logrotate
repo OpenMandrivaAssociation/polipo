@@ -1,0 +1,9 @@
+/var/log/polipo {
+    create 0640 polipo polipo
+    missingok
+    notifempty
+    delaycompress
+    postrotate
+	/sbin/chkconfig polipo && /sbin/service polipo reload 2>/dev/null >/dev/null || : 
+    endscript
+}

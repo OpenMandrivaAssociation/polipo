@@ -83,3 +83,25 @@ rm -f %{buildroot}%{_infodir}/dir
 %postun
 %_postun_userdel %{name}
 
+
+
+%changelog
+* Mon Jun 04 2012 Andrey Bondrov <abondrov@mandriva.org> 1.0.4.1-3
++ Revision: 802317
+- Drop some legacy junk
+
+  + Oden Eriksson <oeriksson@mandriva.com>
+    - the mass rebuild of 2010.1 packages
+
+* Sat Apr 17 2010 Nicolas Lécureuil <nlecureuil@mandriva.com> 1.0.4.1-1mdv2010.1
++ Revision: 535745
+- Add texinfo as buildrequire
+- Fix group
+- Clean spec file
+
+  + Zé <ze@mandriva.org>
+    - import polipo
+
+
+* Mon Apr 12 2010 Zé <ze@mandriva.org> 1.0.4.1-1mde2010.0
+- import project
