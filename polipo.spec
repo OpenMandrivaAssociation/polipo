@@ -4,7 +4,7 @@ Group:		System/Servers
 Version:	20091115
 Release:	1
 License:	MIT
-URL:		http://www.pps.jussieu.fr/~jch/software/%{name}/
+URL:		https://www.pps.jussieu.fr/~jch/software/%{name}/
 Source0:	http://freehaven.net/~chrisd/%{name}/%{name}-%{version}.tar.gz
 Source1:	%{name}.init
 Source2:	%{name}.conf
